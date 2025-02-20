@@ -1,0 +1,133 @@
+html{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    padding: 3% 0%;
+    width: 95%;
+    border: 10px solid black;
+    border-radius: 20px;
+    background-color: salmon;
+    margin: 0 auto;
+    
+}
+.game{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+
+/*PLAYER*/
+.player, .cpu{
+    width: 45%;
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    text-wrap: nowrap;
+    
+
+
+}
+
+
+
+/*BUTTON*/
+
+.button{
+    padding: 0;
+    width: 110px;
+    height: 110px;
+    border: 5px solid black;
+    margin: 0 auto;
+    border-radius: 50%; /* Usa 50% en lugar de 100px para un círculo perfecto */
+}
+
+.button.player{
+    border: 5px solid black;
+    border-radius: 50%; /* Usa 50% en lugar de 100px para un círculo perfecto */
+    transition: transform 0.3s ease; /* Animación suave */
+}
+
+.button.player:hover {
+    transform: scale(1.7); /* Aumenta el tamaño del botón */
+}
+
+img {
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.player .paper{
+    margin-left: 52%;
+}
+
+.cpu .paper{
+    margin-right: 52%;
+}
+
+/*media/**/
+.result{
+    font-size: xx-large;
+}
+
+.highlight { /*dice el resultado enemigo*/
+    border: 7px solid yellow;
+    background-color: yellow;  /* Cambia el color de fondo */
+    transform: scale(1.2);     /* Aumenta el tamaño */
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .game{
+        gap:12vh;
+        
+    }
+    .button-container{
+        display: flex;
+    }
+
+    .player, .cpu {
+        width: 90%; /* Hace que ocupen más espacio en pantallas pequeñas */
+            text-wrap: wrap;
+    }
+
+    .button {
+        width: 80px;
+        height: 80px;
+    }
+
+    body {
+        padding: 5% 2%;
+    }
+    .button{
+
+        padding: 0;
+        border: 5px solid black;
+        margin: 0 auto;
+        border-radius: 50%; /* Usa 50% en lugar de 100px para un círculo perfecto */
+    }
+
+    .player .paper{
+        margin: 0 auto;
+    }
+    
+    .cpu .paper{
+        margin: 0 auto;
+    }
+
+}
